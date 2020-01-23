@@ -1,13 +1,13 @@
 import React from "react";
+import { connect } from 'react-redux';
+import {fetchAlbums} from './actions/fetchAlbums'
 
 class App extends React.Component {
 
 
-  // componentDidMount() {
-  //   fetch('http://localhost:3000/api/v1/albums')
-  //   .then(res => res.json())
-  //   .then(data => console.log(data))
-  // }
+  componentDidMount() {
+    this.props.fetchAlbums({type: 'FETCH_ALBUMS', payload: {name: 'Blue Moon'}})
+  }
 
 
   render() {
@@ -16,7 +16,9 @@ class App extends React.Component {
       App
     </div>
     );
-  }
+  }q
 }
 
-export default App;
+
+
+export default connect(null, {fetchAlbums})(App);

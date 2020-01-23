@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function AlbumIndex() {
+export default function AlbumIndex(props) {
   return (
     <div>
       Album Index
@@ -8,4 +8,4 @@ export default function AlbumIndex() {
   )
 }
 
-// functional component #1
+// stateless component #1

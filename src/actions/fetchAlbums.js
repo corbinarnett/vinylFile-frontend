@@ -6,6 +6,6 @@ export function fetchAlbums(action) {
   //   .then(res => res.json())
   //   .then(data => console.log(data))
 
-    return action
+
 
 }

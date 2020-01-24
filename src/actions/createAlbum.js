@@ -8,5 +8,10 @@ export function createAlbum(formData) {
       },
       body: JSON.stringify(formData)
     })
+    .then(res => res.json())
+    .then(album => dispatch({
+      type: 'CREATE_ALBUM',
+      payload: album
+    }))
   }
 }

@@ -1,9 +1,19 @@
 import React from 'react'
+import AlbumCard from './AlbumCard'
 
 const AlbumIndex = (props) => {
+  let albumCards =  props.albums.map(album => {
+    return (
+      <fieldset key={album.id}>
+        <div>
+          <AlbumCard album={album} />
+        </div>
+      </fieldset>
+    )
+  })
   return (
     <div>
-      {props.albums.map(album => <li>{album.name}</li>)}
+      {albumCards}
     </div>
   )
 }

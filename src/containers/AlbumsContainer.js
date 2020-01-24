@@ -11,12 +11,14 @@ class AlbumsContainer extends Component {
     this.props.fetchAlbums()
   }
 
+  
+
   render() {
     return (
       <div>
         Albums Contiainer
         <AlbumForm />
-        <AlbumIndex />
+        <AlbumIndex albums={this.props.albums}/>
       </div>
     )
   }

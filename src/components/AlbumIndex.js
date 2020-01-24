@@ -1,7 +1,7 @@
 import React from 'react'
 import AlbumCard from './AlbumCard'
 
-const AlbumIndex = (props) => {
+function AlbumIndex(props) {
   let albumCards =  props.albums.map(album => {
     return (
       <fieldset key={album.id}>
@@ -18,5 +18,8 @@ const AlbumIndex = (props) => {
   )
 }
 
+
 // stateless component #1
 export default AlbumIndex
+
+

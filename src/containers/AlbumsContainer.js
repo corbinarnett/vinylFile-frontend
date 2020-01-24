@@ -8,6 +8,7 @@ import {fetchAlbums} from '../actions/fetchAlbums'
 class AlbumsContainer extends Component {
 
   componentDidMount() {
+    // mapDispatchtoProps gives access to this action through props
     this.props.fetchAlbums()
   }
 
@@ -15,11 +16,11 @@ class AlbumsContainer extends Component {
 
   render() {
     return (
-      <div>
-        Albums Contiainer
+      <fieldset>
+        <h3>Albums Contiainer</h3>
         <AlbumForm />
-        <AlbumIndex albums={this.props.albums}/>
-      </div>
+        <AlbumIndex albums={this.props.albums}/> 
+      </fieldset>
     )
   }
 }

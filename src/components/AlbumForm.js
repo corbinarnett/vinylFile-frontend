@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
+import {connect} from 'react-redux'
+import {createAlbum} from '../actions/createAlbum'
 
-export default class AlbumForm extends Component {
+class AlbumForm extends Component {
 
   state = {
     name: '',
@@ -19,7 +21,7 @@ export default class AlbumForm extends Component {
 
     handleSubmit = (event) => {
       event.preventDefault()
-
+      this.props.createAlbum(this.state)
     }
 
   render() {
@@ -51,3 +53,4 @@ export default class AlbumForm extends Component {
   }
 }
 
+export default connect(null, {createAlbum})(AlbumForm)

@@ -22,13 +22,13 @@ class AlbumForm extends Component {
     handleSubmit = (event) => {
       event.preventDefault()
       this.props.createAlbum(this.state)
-      this.setState({
-        name: '',
-        artist: '',
-        label: '',
-        release_date: '',
-        image_url: ''
-      })
+        this.setState({
+          name: '',
+          artist: '',
+          label: '',
+          release_date: '',
+          image_url: ''
+        })
     }
 
   render() {

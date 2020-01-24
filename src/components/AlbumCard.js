@@ -2,7 +2,7 @@ import React from 'react'
 
 const AlbumCard = (props) => {
 
-  console.log(props)
+  // console.log(props)
   return (
     <div>
     <h3>Album Card</h3>

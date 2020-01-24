@@ -3,7 +3,7 @@ export default function albumReducer(state = { albums: [] }, action) {
     case "FETCH_ALBUMS":
       return { albums: action.payload };
     case "CREATE_ALBUM":
-      return {...state, accounts: [...state.accounts, action.payload]}
+      return {...state, albums: [...state.albums, action.payload]}
     default:
       return state;
   }

@@ -1,3 +1,24 @@
+import React, { Component } from 'react'
+import {connect} from 'react-redux'
+
+class AlbumsContainer extends Component {
+  
+  render() {
+    console.log(this.props.albums)
+    return (
+      <div>
+        
+      </div>
+    )
+  }
+}
+
+const mapStateToProps = (state) => {
+  return { albums: state.albums }
+}
+
+export default connect(mapStateToProps)(AlbumsContainer)
+
 // import React, { Component } from 'react'
 // import { connect } from 'react-redux';
 // import {Route, Switch} from 'react-router-dom'

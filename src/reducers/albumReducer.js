@@ -2,7 +2,8 @@ export default function albumReducer(state = [], action) {
   switch (action.type) {
     case "FETCH_ALBUMS":
       return action.payload;
-
+    case "CREATE_BOOK":
+      return state.concat(action.payload);
     default:
       return state;
   }

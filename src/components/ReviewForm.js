@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
 import {connect} from 'react-redux'
+import {createReview} from '../actions/createReview'
 
 class ReviewForm extends Component {
-  
+
+
   state = {
     username: '',
     content: '',
@@ -18,7 +20,7 @@ class ReviewForm extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault()
-    this.props.createReview(this.state)
+    this.props.createReview(this.state, this.props.album.id)
       this.setState({
         username: '',
         content: '',
@@ -46,4 +48,6 @@ class ReviewForm extends Component {
   }
 }
 
-export default connect(null)(ReviewForm)
+export default connect(null, {createReview})(ReviewForm)
+
+// getting props from ProfileContainer and mapDispatchtoProps

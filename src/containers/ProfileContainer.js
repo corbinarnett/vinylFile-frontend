@@ -9,7 +9,7 @@ function ProfileContainer(props) {
 
     return (
       <div>
-        <ReviewForm/>
+        <ReviewForm album={album}/>
         <AlbumProfile album={album && album}/>
         <ReviewIndex reviews={album && album.reviews}/>
       </div>

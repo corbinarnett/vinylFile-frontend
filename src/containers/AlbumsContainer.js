@@ -1,13 +1,17 @@
 import React, { Component } from 'react'
 import {connect} from 'react-redux'
 
+// import AlbumForm from '../components/AlbumForm'
+import AlbumIndex from '../components/AlbumIndex'
+
 class AlbumsContainer extends Component {
   
   render() {
     console.log(this.props.albums)
     return (
       <div>
-        
+        {/* <AlbumForm /> */}
+        <AlbumIndex albums={this.props.albums}/>
       </div>
     )
   }

@@ -1,15 +1,15 @@
-import React from 'react'
+// import React from 'react'
 
-function ReviewIndex(props) {
-    return (
-      <div>
-        {props.reviews && props.reviews.map(review =>
-          <li key={review.id}>{review.username}</li>
-        )}
-      </div>
-    )
-}
+// function ReviewIndex(props) {
+//     return (
+//       <div>
+//         {props.reviews && props.reviews.map(review =>
+//           <li key={review.id}>{review.username}</li>
+//         )}
+//       </div>
+//     )
+// }
 
-export default ReviewIndex
+// export default ReviewIndex
 
-// this is being sent props from the ProfileContainer
+// // this is being sent props from the ProfileContainer

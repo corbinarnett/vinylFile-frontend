@@ -1,30 +1,30 @@
-import React from 'react'
+// import React from 'react'
 
-const AlbumProfile = (props) => {
+// const AlbumProfile = (props) => {
 
-  function profileCard(props) {
-    if (props.album) {
-      return (
-        <div key={props.album.id}>
-          <h3>Album Profile</h3>
-          <img src={props.album.image_url} alt={props.album.name}/>
-          <h4>{props.album.name}</h4>
-          <h4>{props.album.artist}</h4>
-        </div>
-      )
-    }
-  }
+//   function profileCard(props) {
+//     if (props.album) {
+//       return (
+//         <div key={props.album.id}>
+//           <h3>Album Profile</h3>
+//           <img src={props.album.image_url} alt={props.album.name}/>
+//           <h4>{props.album.name}</h4>
+//           <h4>{props.album.artist}</h4>
+//         </div>
+//       )
+//     }
+//   }
   
 
-  return (
+//   return (
   
-      <div>
-        {profileCard(props)}
-      </div>
+//       <div>
+//         {profileCard(props)}
+//       </div>
       
-    )
-}
+//     )
+// }
 
-export default AlbumProfile
+// export default AlbumProfile
 
-// this is being sent props from the ProfileContainer
+// // this is being sent props from the ProfileContainer

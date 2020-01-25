@@ -1,5 +1,5 @@
 import React from 'react'
-import AlbumCard from './AlbumCard'
+import AlbumCard from './AlbumIndexCard'
 
 function AlbumIndex(props) {
   let albumCards =  props.albums.map(album => {

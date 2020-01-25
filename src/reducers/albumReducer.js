@@ -1,3 +1,12 @@
+export default function albumReducer(state = [], action) {
+  switch (action.type) {
+    case "FETCH_ALBUMS":
+      return action.payload;
+
+    default:
+      return state;
+  }
+}
 // export default function albumReducer(state = { albums: [] }, action) {
 //   switch (action.type) {
 //     case "FETCH_ALBUMS":

@@ -3,7 +3,6 @@ import React from "react";
 // import {fetchAlbums} from './actions/fetchAlbums'
 import AlbumsContainer from "./containers/AlbumsContainer";
 class App extends React.Component {
-
   render() {
     return (
       <div className="App">
@@ -11,7 +10,6 @@ class App extends React.Component {
       </div>
     );
   }
-  q;
 }
 
 export default App;

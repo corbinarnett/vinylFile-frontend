@@ -8,10 +8,12 @@ class ReviewsContainer extends Component {
       <div>
         ReviewsContainer
         <ReviewForm/>
-        <ReviewIndex/>
+        <ReviewIndex reviews={this.props.album && this.props.album.reviews}/>
       </div>
     )
   }
 }
 
 export default ReviewsContainer
+
+// this is receiving props from AlbumProfile

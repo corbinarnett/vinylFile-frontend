@@ -8,7 +8,7 @@ function AlbumProfile(props) {
   // console.log(album)
   return (
     <div>
-      <ReviewsContainer />
+      <ReviewsContainer album={album}/>
       {album ? album.name : null} 
     </div>
   )

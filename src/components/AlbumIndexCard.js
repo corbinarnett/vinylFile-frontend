@@ -1,20 +1,21 @@
-import React from 'react'
-// import {Link} from 'react-router-dom'
+import React, { Component } from 'react'
 
-
-const AlbumIndexCard = ({album}) => {
-  return (
-    <div>
-    <h3>Album Card</h3>
-      <img src={album.image_url} alt={album.name}/>
-      <h4>{album.name}</h4>
-      <h4>{album.artist}</h4>
-      {/* <Link to={`/albums/${album.id}`}>Reviews</Link> */}
-    </div>
-  )
+class AlbumIndexCard extends Component {
+  render() {
+    return (
+      <div>
+        <h3>Album Card</h3>
+         <img src={this.props.album.image_url} alt={this.props.album.name}/>
+         <h4>{this.props.album.name}</h4>
+         <h4>{this.props.album.artist}</h4>
+       {/* <Link to={`/albums/${album.id}`}>Reviews</Link> */}
+      </div>
+    )
+  }
 }
 
 export default AlbumIndexCard
+
 
 // import React from 'react'
 // import {Link} from 'react-router-dom'

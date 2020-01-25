@@ -1,21 +1,17 @@
-import React from 'react'
+import React, { Component } from 'react'
 import ReviewForm from '../components/ReviewForm'
 import ReviewIndex from '../components/ReviewIndex'
 
-function ProfileContainer(props) {
-  
-  let album = props.albums[props.match.params.id - 1]
- 
+class ProfileContainer extends Component {
+  render() {
     return (
       <div>
-        ProfileContainer
+        ReviewsContainer
         <ReviewForm/>
-        <ReviewIndex reviews={album && album.reviews}/>
+        <ReviewIndex reviews={this.props.album && this.props.album.reviews}/>
       </div>
     )
-
+  }
 }
 
 export default ProfileContainer
-
-// this is receiving props from AlbumProfile

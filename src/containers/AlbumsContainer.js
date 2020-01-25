@@ -4,7 +4,7 @@ import {Route, Switch} from 'react-router-dom'
 import AlbumForm from '../components/AlbumForm'
 import AlbumIndex from '../components/AlbumIndex'
 import {fetchAlbums} from '../actions/fetchAlbums'
-import ProfileContainer from './ProfileContainer'
+import AlbumProfile from '../components/AlbumProfile'
 
 class AlbumsContainer extends Component {
 
@@ -20,7 +20,7 @@ class AlbumsContainer extends Component {
       <div>
       <Switch>
         <Route path='/albums/new' component={AlbumForm}/>
-        <Route path='/albums/:id' render={(routerProps) => <ProfileContainer {...routerProps} albums={this.props.albums}/>}/>
+        <Route path='/albums/:id' render={(routerProps) => <AlbumProfile {...routerProps} albums={this.props.albums}/>}/>
         <Route exact path='/albums' render={(routerProps) => <AlbumIndex {...routerProps} albums={this.props.albums}/>}/>
       </Switch>
         

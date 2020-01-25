@@ -9,9 +9,11 @@ function AlbumProfile(props) {
   return (
     <div>
       <ReviewsContainer />
-      {album ? album.reviews.map((review) => review.content) : null} 
+      {album ? album.name : null} 
     </div>
   )
 }
 
 export default AlbumProfile
+
+// currently this is being sent props from the AlbumsContainer

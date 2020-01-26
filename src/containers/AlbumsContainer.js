@@ -6,6 +6,8 @@ import Albums from "../components/Albums";
 import { fetchAlbums } from "../actions/albumActions";
 import Album from "../components/Album";
 import Home from "../components/Home"
+import { NavBar } from "../components/NavBar";
+
 
 class AlbumsContainer extends Component {
   componentDidMount() {
@@ -14,6 +16,10 @@ class AlbumsContainer extends Component {
 
   render() {
     return (
+      <>
+      <div>
+        <NavBar/>
+      </div>
       <div>
         <Switch>
           <Route exact path='/' component={Home}/>
@@ -32,6 +38,7 @@ class AlbumsContainer extends Component {
           />
         </Switch>
       </div>
+      </>
     );
   }
 }

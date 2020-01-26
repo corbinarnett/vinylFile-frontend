@@ -21,7 +21,7 @@ class AlbumsContainer extends Component {
       <div>
       <Switch>
         <Route path='/albums/new' component={AlbumForm}/>
-        {/* <Route path='/albums/:id' render={(routerProps) => <Album {...routerProps} albums={this.props.albums}/>}/> */}
+        <Route path='/albums/:id' render={(routerProps) => <Album {...routerProps} albums={this.props.albums}/>}/>
         <Route path='/albums' render={(routerProps) => <Albums {...routerProps} albums={this.props.albums}/>}/>
       </Switch>
         

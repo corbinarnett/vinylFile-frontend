@@ -1,10 +1,10 @@
-import { combineReducers } from 'redux';
-import albumReducer from './albumReducer';
-import reviewReducer from './reviewReducer';
-
-const rootReducer = combineReducers({
-  albums: albumReducer,
-  reviews: reviewReducer
-})
-
-export default rootReducer
+export default function accountReducer(state = {albums: []}, action) {
+  // console.log(action.payload)
+  switch (action.type) {
+    case 'FETCH_ALBUMS':
+      return {albums: action.payload}
+      
+    default: 
+      return state
+    }
+}

@@ -1,45 +1,13 @@
-import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Switch, } from 'react-router-dom';
-import { connect } from 'react-redux';
-import {fetchAlbums} from './actions/albumActions'
-
+import React, { Component } from 'react'
+// import {connect} from 'react-redux'
 import AlbumsContainer from './containers/AlbumsContainer'
 
-
-class App extends Component {
-
-componentDidMount() {
-  this.props.fetchAlbums();
-}
-
-  render () {
+export default class App extends Component {
+  render() {
     return (
       <div>
-        <Router>
-          <Switch>
-            <Route exact path='/' component={AlbumsContainer}/>
-          </Switch>
-        </Router>
+        <AlbumsContainer/>
       </div>
     )
   }
 }
-
-
-export default connect(null, { fetchAlbums })(App);
-
-// import React from "react";
-// // import { connect } from 'react-redux';
-// // import {fetchAlbums} from './actions/fetchAlbums'
-// import AlbumsContainer from "./containers/AlbumsContainer";
-// class App extends React.Component {
-//   render() {
-//     return (
-//       <div className="App">
-//         <AlbumsContainer />
-//       </div>
-//     );
-//   }
-// }
-
-// export default App;

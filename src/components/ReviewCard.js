@@ -1,7 +1,8 @@
 import React from "react";
 
-export default function ReviewCard(props) {
-  console.log(props.review);
+function ReviewCard(props) {
+  // console.log(props.review);
+
   return (
     <fieldset>
       <h4>
@@ -11,3 +12,5 @@ export default function ReviewCard(props) {
     </fieldset>
   );
 }
+
+export default ReviewCard;

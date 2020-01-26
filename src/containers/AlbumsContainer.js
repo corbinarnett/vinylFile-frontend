@@ -5,6 +5,7 @@ import AlbumForm from "../components/AlbumForm";
 import Albums from "../components/Albums";
 import { fetchAlbums } from "../actions/albumActions";
 import Album from "../components/Album";
+import Home from "../components/Home"
 
 class AlbumsContainer extends Component {
   componentDidMount() {
@@ -15,6 +16,7 @@ class AlbumsContainer extends Component {
     return (
       <div>
         <Switch>
+          <Route exact path='/' component={Home}/>
           <Route path="/albums/new" component={AlbumForm} />
           <Route
             path="/albums/:id/reviews"

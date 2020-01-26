@@ -19,10 +19,8 @@ const Albums = props => {
         </div>
 
       ))} */}
-      
-      <CardDeck>{albums}</CardDeck>
-      
-      
+
+      <CardDeck className="d-flex justify-content-around">{albums}</CardDeck>
     </div>
   );
 };

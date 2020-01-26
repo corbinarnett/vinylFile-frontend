@@ -5,7 +5,7 @@ import Button from "react-bootstrap/Button";
 const Home = () => {
   return (
     <>
-      <Jumbotron>
+      <Jumbotron fluild>
         <h1>vinylFile.</h1>
         <p>
           This is a simple hero unit, a simple jumbotron-style component for

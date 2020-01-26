@@ -8,9 +8,9 @@ export default function rootReducer(state = { albums: [] }, action) {
       return { ...state, albums: [...state.albums, action.payload] };
       
     case "CREATE_REVIEW":
-      let albums = state.albums.map(album => {
-        if (album.id === action.payload.id) {
-          return action.payload;
+      let albums = state.albums.map(album => {  //iterate through albums
+        if (album.id === action.payload.id) {   //find the correct album
+         return action.payload;                 //replace the entire album with a new copy plus the newly created review, this was done so iteration wasn't needed through an albums reviews.
         } else {
           return album;
         }

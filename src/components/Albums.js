@@ -1,18 +1,16 @@
+import React from "react";
+import AlbumCard from "./AlbumCard";
 
-import React from 'react'
-import AlbumCard from './AlbumCard'
-
-const Albums = (props) => {
-
+const Albums = props => {
   return (
     <div>
-      {props.albums.map(album =>
+      {props.albums.map(album => (
         <div key={album.id}>
-          <AlbumCard album={album}/>
-        </div> )}
+          <AlbumCard album={album} />
+        </div>
+      ))}
     </div>
+  );
+};
 
-  )
-}
-
-export default Albums
+export default Albums;

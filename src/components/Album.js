@@ -3,6 +3,7 @@ import ReviewsContainer from "../containers/ReviewsContainer";
 
 const Album = props => {
   let album = props.albums.filter(
+    // eslint-disable-next-line
     album => album.id == props.match.params.id
   )[0];
 

@@ -1,17 +1,18 @@
-import React from 'react'
+import React from "react";
+import ReviewCard from "./ReviewCard";
 
 function Reviews(props) {
   // console.log(props.reviews)
   return (
     <div>
-      {props.reviews && props.reviews.map(review => 
-        <h5 key={review.id}>{review.content}</h5>
-      
-        
-      )}
+      {props.reviews &&
+        props.reviews.map(review => (
+          <div key={review.id}>
+            <ReviewCard review={review} />
+          </div>
+        ))}
     </div>
-  )
+  );
 }
 
-
-export default Reviews
+export default Reviews;

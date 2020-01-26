@@ -1,17 +1,15 @@
 import React from 'react'
-import ReviewForm from '../components/ReviewForm'
-import ReviewIndex from '../components/ReviewIndex'
-import AlbumProfile from '../components/AlbumProfile'
+// import ReviewForm from '../components/ReviewForm'
+import Reviews from '../components/Reviews'
+
+
 
 function ReviewsContainer(props) {
   
-  let album = props.albums[props.match.params.id - 1]
 
     return (
       <div>
-        <ReviewForm album={album}/>
-        <AlbumProfile album={album && album}/>
-        <ReviewIndex reviews={album && album.reviews}/>
+        <Reviews reviews={props.album && props.album.reviews}/>
       </div>
     )
 }

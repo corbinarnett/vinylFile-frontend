@@ -1,6 +1,12 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { createAlbum } from "../actions/albumActions";
+import Form from "react-bootstrap/Form";
+import Button from "react-bootstrap/Button";
+import Container from "react-bootstrap/Container";
+import {Redirect} from 'react-router-dom'
+
+
 
 class AlbumForm extends Component {
   state = {
@@ -27,13 +33,15 @@ class AlbumForm extends Component {
       label: "",
       release_date: "",
       image_url: "",
-    });
+    })
+    
+    
   };
 
   render() {
     return (
-      <div>
-        <fieldset>
+      <Container>
+        {/* <fieldset>
           <h3>Album Form</h3>
           <form onSubmit={this.handleSubmit}>
             <label>Album Name: </label>
@@ -93,8 +101,63 @@ class AlbumForm extends Component {
             <br />
             <input type="submit" />
           </form>
-        </fieldset>
-      </div>
+        </fieldset> */}
+        <Form onSubmit={this.handleSubmit}>
+          <Form.Group controlId="formBasic">
+            <Form.Label>Album Name</Form.Label>
+            <Form.Control type="text"
+              placeholder="Name"
+              name="name"
+              value={this.state.name}
+              onChange={this.handleChange}
+              required/>
+          </Form.Group>
+
+          <Form.Group controlId="formBasic">
+            <Form.Label>Artist</Form.Label>
+            <Form.Control type="text"
+              placeholder="Artist"
+              name="artist"
+              value={this.state.artist}
+              onChange={this.handleChange}
+              required/>
+          </Form.Group>
+
+          <Form.Group controlId="formBasic">
+            <Form.Label>Recording Label</Form.Label>
+            <Form.Control type="text"
+              placeholder="Recording Label"
+              name="label"
+              value={this.state.label}
+              onChange={this.handleChange}
+              required/>
+          </Form.Group>
+
+          <Form.Group controlId="formBasic">
+            <Form.Label>Release Date</Form.Label>
+            <Form.Control type="text"
+              placeholder="Release Date"
+              name="release_date"
+              value={this.state.release_date}
+              onChange={this.handleChange}
+              required/>
+          </Form.Group>
+
+          <Form.Group controlId="formBasic">
+            <Form.Label>Image URL</Form.Label>
+            <Form.Control type="text"
+              placeholder="Image URL"
+              name="image_url"
+              value={this.state.image_url}
+              onChange={this.handleChange}
+              required/>
+          </Form.Group>
+          
+          <Button variant="primary" type="submit">
+            Submit
+          </Button>
+        </Form>
+      </Container>
     );
   }
 }

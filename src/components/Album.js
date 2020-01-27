@@ -12,7 +12,7 @@ const Album = props => {
   return (
     <div>
       {album && (
-        <Container>
+        
           <Card bg="info" text="white">
             <Card.Body>
               <Card.Title>{album.name}</Card.Title>
@@ -22,7 +22,7 @@ const Album = props => {
               </Card.Text>
             </Card.Body>
           </Card>
-        </Container>
+        
       )}
       <br />
       <ReviewsContainer album={album} />

@@ -37,7 +37,8 @@ class AlbumForm extends Component {
 
   render() {
     return (
-      <Container>
+      <Container >
+        <h2>Add A New Album</h2>
         <Form onSubmit={this.handleSubmit}>
           <Form.Group controlId="formBasic">
             <Form.Label>Album Name</Form.Label>

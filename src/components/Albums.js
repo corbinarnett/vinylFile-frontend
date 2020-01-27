@@ -1,6 +1,8 @@
 import React from "react";
 import AlbumCard from "./AlbumCard";
 import CardDeck from "react-bootstrap/CardDeck";
+import Jumbotron from "react-bootstrap/Jumbotron";
+
 
 const Albums = props => {
   let albums = props.albums.map(album => {
@@ -12,6 +14,9 @@ const Albums = props => {
   });
   return (
     <div>
+    <Jumbotron fluild className="text-center">
+        <h1>Albums</h1>
+      </Jumbotron>
       {/* {props.albums.map(album => (
 
         <div key={album.id}>

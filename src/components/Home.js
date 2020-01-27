@@ -5,14 +5,13 @@ import Button from "react-bootstrap/Button";
 const Home = () => {
   return (
     <>
-      <Jumbotron fluild>
+      <Jumbotron fluild className="text-center">
         <h1>vinylFile.</h1>
         <p>
-          This is a simple hero unit, a simple jumbotron-style component for
-          calling extra attention to featured content or information.
+          A simple React/Redux application built with a Rails API, add an album or post a review.
         </p>
         <p>
-          <Button variant="primary">Learn more</Button>
+          <Button variant="primary" href='/albums'>Albums</Button>
         </p>
       </Jumbotron>
     </>

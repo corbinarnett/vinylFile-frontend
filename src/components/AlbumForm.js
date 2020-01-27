@@ -5,8 +5,6 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 
-
-
 class AlbumForm extends Component {
   state = {
     name: "",
@@ -24,6 +22,7 @@ class AlbumForm extends Component {
   };
 
   handleSubmit = event => {
+    alert(this.state.name + " was added");
     event.preventDefault();
     this.props.createAlbum(this.state);
     this.setState({
@@ -32,9 +31,8 @@ class AlbumForm extends Component {
       label: "",
       release_date: "",
       image_url: "",
-    })
-    
-    
+    });
+    this.props.history.push('/albums')
   };
 
   render() {
@@ -43,54 +41,64 @@ class AlbumForm extends Component {
         <Form onSubmit={this.handleSubmit}>
           <Form.Group controlId="formBasic">
             <Form.Label>Album Name</Form.Label>
-            <Form.Control type="text"
+            <Form.Control
+              type="text"
               placeholder="Name"
               name="name"
               value={this.state.name}
               onChange={this.handleChange}
-              required/>
+              required
+            />
           </Form.Group>
 
           <Form.Group controlId="formBasic">
             <Form.Label>Artist</Form.Label>
-            <Form.Control type="text"
+            <Form.Control
+              type="text"
               placeholder="Artist"
               name="artist"
               value={this.state.artist}
               onChange={this.handleChange}
-              required/>
+              required
+            />
           </Form.Group>
 
           <Form.Group controlId="formBasic">
             <Form.Label>Recording Label</Form.Label>
-            <Form.Control type="text"
+            <Form.Control
+              type="text"
               placeholder="Recording Label"
               name="label"
               value={this.state.label}
               onChange={this.handleChange}
-              required/>
+              required
+            />
           </Form.Group>
 
           <Form.Group controlId="formBasic">
             <Form.Label>Release Date</Form.Label>
-            <Form.Control type="text"
+            <Form.Control
+              type="text"
               placeholder="Release Date"
               name="release_date"
               value={this.state.release_date}
               onChange={this.handleChange}
-              required/>
+              required
+            />
           </Form.Group>
 
           <Form.Group controlId="formBasic">
             <Form.Label>Image URL</Form.Label>
-            <Form.Control type="text"
+            <Form.Control
+              type="text"
               placeholder="Image URL"
               name="image_url"
               value={this.state.image_url}
               onChange={this.handleChange}
-              required/>
+              required
+            />
           </Form.Group>
-          
+
           <Button variant="primary" type="submit">
             Submit
           </Button>

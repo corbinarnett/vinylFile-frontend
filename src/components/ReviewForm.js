@@ -31,50 +31,6 @@ class ReviewForm extends Component {
 
   render() {
     return (
-      // <div>
-      //   <fieldset>
-      //     <h3>New Review Form</h3>
-      //     <form onSubmit={this.handleSubmit}>
-      //       <label>Username: </label>
-      //       <input
-      //         type="text"
-      //         placeholder="username"
-      //         name="username"
-      //         value={this.state.username}
-      //         onChange={this.handleChange}
-      //         required
-      //       />{" "}
-      //       <br />
-      //       <br />
-      //       <label>Content: </label>
-      //       <textarea
-      //         rows="4"
-      //         cols="50"
-      //         placeholder="Your Review"
-      //         name="content"
-      //         value={this.state.content}
-      //         onChange={this.handleChange}
-      //         required
-      //       />{" "}
-      //       <br />
-      //       <br />
-      //       <label>Rating: </label>
-      //       <input
-      //         min="1"
-      //         max="10"
-      //         type="number"
-      //         placeholder="1-10"
-      //         name="rating"
-      //         value={this.state.rating}
-      //         onChange={this.handleChange}
-      //         required
-      //       />{" "}
-      //       <br />
-      //       <br />
-      //       <input type="submit" />
-      //     </form>
-      //   </fieldset>
-      // </div>
       <Container>
         <Form onSubmit={this.handleSubmit}>
           <Form.Group controlId="formBasic">
@@ -91,7 +47,7 @@ class ReviewForm extends Component {
 
           <Form.Group controlId="formBasic">
             <Form.Label>Content</Form.Label>
-            <Form.Control
+            <Form.Control as="textarea"
               type="text"
               placeholder="Content"
               name="content"
@@ -104,7 +60,7 @@ class ReviewForm extends Component {
           <Form.Group controlId="formBasic">
             <Form.Label>Rating</Form.Label>
             <Form.Control
-              type="text"
+              type="number"
               min="1"
               max="10"
               placeholder="Rating"

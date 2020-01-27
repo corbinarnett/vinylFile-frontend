@@ -12,7 +12,7 @@ export default function AlbumCard(props) {
     //   <h4>{props.album.artist}</h4>
     //   <Link to={`/albums/${props.album.id}/reviews`}>Reviews</Link>
     // </div>
-    <Card>
+    <Card border="light" className="text-center">
       <Card.Img variant="top" src={props.album.image_url} />
       <Card.Body>
         <Card.Title>{props.album.name}</Card.Title>

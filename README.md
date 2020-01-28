@@ -11,7 +11,7 @@ To run vinylFile, fork and clone this repository onto your machine:
 $ yarn start
 ```
 
-Fork and clone the vinylFile-backend folder, run the following commands to prepare the database: 
+Fork and clone the vinylFile-backend repository, run the following commands to prepare the database: 
 ```
 $ rails db:create
 $ rails db:migrate

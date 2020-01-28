@@ -18,6 +18,17 @@ export default function rootReducer(state = { albums: [] }, action) {
         }
       });
       return { ...state, albums: albums };
+    case "DELETE_REVIEW":
+      let album = state.albums.map(album => {
+        //iterate through albums
+        if (album.id === action.payload.id) {
+          //find the correct album
+          return action.payload; //replace the entire album with a new copy minus the now deleted review, this was done so iteration wasn't needed through an albums reviews.
+        } else {
+          return album;
+        }
+      });
+      return { ...state, albums: album };
 
     default:
       return state;

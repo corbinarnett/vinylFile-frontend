@@ -14,7 +14,7 @@ const Albums = props => {
   });
   return (
     <div>
-    <Jumbotron fluild className="text-center">
+    <Jumbotron fluid className="text-center">
         <h1>Albums</h1>
       </Jumbotron>
       {/* {props.albums.map(album => (

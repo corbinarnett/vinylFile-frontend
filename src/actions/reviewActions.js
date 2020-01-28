@@ -17,4 +17,12 @@ export function createReview(formData, albumId) {
 
 
 
-
+export function deleteReview(reviewId, albumId) {
+  return (dispatch) => {
+    return fetch(`http://localhost:3000/api/v1/albums/${albumId}/reviews/${reviewId}`, {
+      method: "DELETE"
+    })
+    .then(res => res.json())
+    .then(album => dispatch({type: 'DELETE_REVIEW', payload: album}))
+  }
+}

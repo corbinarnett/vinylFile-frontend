@@ -34,7 +34,7 @@ class ReviewForm extends Component {
       <Container>
         <h2>Add A New Review</h2>
         <Form onSubmit={this.handleSubmit}>
-          <Form.Group controlId="formBasic">
+          <Form.Group controlId="formBasicUsername">
             <Form.Label>Username</Form.Label>
             <Form.Control
               type="text"
@@ -46,7 +46,7 @@ class ReviewForm extends Component {
             />
           </Form.Group>
 
-          <Form.Group controlId="formBasic">
+          <Form.Group controlId="formBasicContent">
             <Form.Label>Content</Form.Label>
             <Form.Control as="textarea"
               type="text"
@@ -58,7 +58,7 @@ class ReviewForm extends Component {
             />
           </Form.Group>
 
-          <Form.Group controlId="formBasic">
+          <Form.Group controlId="formBasicRating">
             <Form.Label>Rating</Form.Label>
             <Form.Control
               type="number"

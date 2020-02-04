@@ -7,6 +7,7 @@ import { fetchAlbums } from "../actions/albumActions";
 import Album from "../components/Album";
 import Home from "../components/Home"
 import { NavBar } from "../components/NavBar";
+import Error from "../components/Error"
 
 
 class AlbumsContainer extends Component {
@@ -20,7 +21,8 @@ class AlbumsContainer extends Component {
       <div>
         <NavBar/>
       </div>
-      <div>
+      <div> 
+        {/* Switch ensures that only one component is redered at a time */}
         <Switch>
           <Route exact path='/' component={Home}/>
           <Route path="/albums/new" component={AlbumForm} />
@@ -36,6 +38,7 @@ class AlbumsContainer extends Component {
               <Albums {...routerProps} albums={this.props.albums} />
             )}
           />
+          <Route component={Error} />
         </Switch>
       </div>
       </>
@@ -49,4 +52,4 @@ const mapStatetoProps = state => {
   };
 };
 
-export default connect(mapStatetoProps, { fetchAlbums })(AlbumsContainer);
+export default connect(mapStatetoProps, { fetchAlbums })(AlbumsContainer);  //The connect() function connects a React component to a Redux store.

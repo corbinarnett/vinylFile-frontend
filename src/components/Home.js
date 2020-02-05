@@ -6,7 +6,6 @@ const Home = () => {
   return (
     <>
       <Jumbotron
-        fluild
         className="text-center"
         style={{ backgroundColor: "white" }}
       >

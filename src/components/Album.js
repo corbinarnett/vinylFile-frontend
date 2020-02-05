@@ -3,6 +3,7 @@ import ReviewsContainer from "../containers/ReviewsContainer";
 import Card from "react-bootstrap/Card";
 
 const Album = props => {
+  // console.log(props)
   let album = props.albums.filter(
     // eslint-disable-next-line
     album => album.id == props.match.params.id

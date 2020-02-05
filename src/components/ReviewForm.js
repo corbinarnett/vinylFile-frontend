@@ -62,8 +62,8 @@ class ReviewForm extends Component {
             <Form.Label>Rating</Form.Label>
             <Form.Control
               type="number"
-              min="1"
-              max="10"
+              min="1.0"
+              max="10.0"
               placeholder="Rating"
               name="rating"
               value={this.state.rating}

@@ -18,6 +18,7 @@ export default function rootReducer(state = { albums: [] }, action) {
         }
       });
       return { ...state, albums: albums };
+      
     case "DELETE_REVIEW":
       let album = state.albums.map(album => {
         //iterate through albums

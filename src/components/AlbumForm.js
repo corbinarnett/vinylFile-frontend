@@ -40,7 +40,7 @@ class AlbumForm extends Component {
       <Container >
         <h2>Add A New Album</h2>
         <Form onSubmit={this.handleSubmit}>
-          <Form.Group controlId="formBasic">
+          <Form.Group controlId="formBasic-Name">
             <Form.Label>Album Name</Form.Label>
             <Form.Control
               type="text"
@@ -52,7 +52,7 @@ class AlbumForm extends Component {
             />
           </Form.Group>
 
-          <Form.Group controlId="formBasic">
+          <Form.Group controlId="formBasic-Artist">
             <Form.Label>Artist</Form.Label>
             <Form.Control
               type="text"
@@ -64,7 +64,7 @@ class AlbumForm extends Component {
             />
           </Form.Group>
 
-          <Form.Group controlId="formBasic">
+          <Form.Group controlId="formBasic-Label">
             <Form.Label>Recording Label</Form.Label>
             <Form.Control
               type="text"
@@ -88,7 +88,7 @@ class AlbumForm extends Component {
             />
           </Form.Group>
 
-          <Form.Group controlId="formBasic">
+          <Form.Group controlId="formBasic-Image">
             <Form.Label>Image URL</Form.Label>
             <Form.Control
               type="text"

@@ -48,7 +48,8 @@ class ReviewForm extends Component {
 
           <Form.Group controlId="formBasicContent">
             <Form.Label>Content</Form.Label>
-            <Form.Control as="textarea"
+            <Form.Control
+              as="textarea"
               type="text"
               placeholder="Content"
               name="content"

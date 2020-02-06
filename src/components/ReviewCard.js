@@ -5,32 +5,28 @@ import Card from "react-bootstrap/Card";
 import Container from "react-bootstrap/Container";
 // import Button from "react-bootstrap/Button";
 
-const ReviewCard = (props) => {
+const ReviewCard = props => {
   // album_id is not being passed through props, maybe use a serializer on the backend? belongs_to :album?
   console.log(props);
 
-
-  // const handleDelete = () => {
-  //   debugger;
-  //   props.deleteReview(props.review.id, props.review.album_id)
-  // }
-
   return (
     <Container>
-    
       <Card className="text-center" border="info">
         <Card.Body>
           <Card.Title>Rating: {props.review.rating}/10</Card.Title>
-          <Card.Text>
-          {props.review.content}
-          </Card.Text>
+          <Card.Text>{props.review.content}</Card.Text>
           {/* <Button onClick={handleDelete}>X</Button> */}
-        </Card.Body><br/>
-        <Card.Footer className="text-muted">Posted By: {props.review.username}</Card.Footer>
-      </Card><br/><br/>
+        </Card.Body>
+        <br />
+        <Card.Footer className="text-muted">
+          Posted By: {props.review.username}
+        </Card.Footer>
+      </Card>
+      <br />
+      <br />
     </Container>
   );
-}
+};
 
 // export default connect(null, {deleteReview})(ReviewCard);
-export default ReviewCard
+export default ReviewCard;

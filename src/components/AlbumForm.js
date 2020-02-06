@@ -32,12 +32,12 @@ class AlbumForm extends Component {
       release_date: "",
       image_url: "",
     });
-    this.props.history.push('/albums')
+    this.props.history.push("/albums");
   };
 
   render() {
     return (
-      <Container >
+      <Container>
         <h2>Add A New Album</h2>
         <Form onSubmit={this.handleSubmit}>
           <Form.Group controlId="formBasic-Name">

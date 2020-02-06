@@ -42,7 +42,7 @@ class Albums extends React.Component {
   render() {
     return (
       <div>
-        <Jumbotron fluid className="text-center">
+        <Jumbotron className="text-center">
           <h1>Albums</h1>
           <select
             onChange={this.handleChange}

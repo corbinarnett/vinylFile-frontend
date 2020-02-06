@@ -6,7 +6,8 @@ import ReviewForm from "../components/ReviewForm";
 function ReviewsContainer(props) {
   return (
     <div>
-      <ReviewForm album={props.album} /><br/>
+      <ReviewForm album={props.album} />
+      <br />
       <Reviews reviews={props.album && props.album.reviews} />
     </div>
   );
